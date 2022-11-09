@@ -23,5 +23,17 @@ def play(word):
         if len(guess) == 1 and guess.isalpha():
             if guess in guessed_letters:
                 print("Haven´t you clicked here before?", guess)
+            elif guess not in word:
+                print(guess, "is a good guess, but not the right one")
+                tries  -= 1
+                guessed_letters.append(guess)
+            else:
+                print("Good job",guess, "is in the word!")
+                guessed_letters.append(guess)
+                word as list = list(word_completiton)
+                indices = [i for i, letter in enumerate(word) if letter == guess]
+                for index in indices:
+        
 
+    
             

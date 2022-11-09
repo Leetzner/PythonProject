@@ -6,4 +6,12 @@ word_list= [
     'recreant',
     'hurse',
     'xylophone',
+    'character',
+    'gitpod',
+    'code',
+    'institute',
+    'command',
+    'beginner',
+    'programming',
+    'python',
 ]
