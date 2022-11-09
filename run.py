@@ -13,9 +13,15 @@ def play(word):
     guessed_letters = []
     guessed_words = []
     tries = 7
-    print("I challenge you to not get hanged by the pole")
+    print("I challenge you to NOT get hanged by the pole""/n""Good luck!")
     print(display_hangman(tries))
     print(word_completiton)
     print("/n")
+#While loop for handling the ammount of tries and when you´re out of guesses
     while not guessed and tried > 0 :
         guess = input("Please guess a letter or word:").upper()
+        if len(guess) == 1 and guess.isalpha():
+            if guess in guessed_letters:
+                print("Haven´t you clicked here before?", guess)
+
+            
