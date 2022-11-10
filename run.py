@@ -14,7 +14,9 @@ def play(word):
     guessed_words = []
     tries = 7
     print("I challenge you to NOT get hanged by the pole""/n""Good luck!")
-    
+    print(display_hangman(tries))
+    print(word_completiton)
+    print("/n")
 #While loop for handling the ammount of tries and when you´re out of guesses
     while not guessed and tried > 0 :
         guess = input("Please guess a letter or word:").upper()
@@ -26,7 +28,7 @@ def play(word):
                 tries  -= 1
                 guessed_letters.append(guess)
             else:
-                print("You´re right!"guess, "is in the word!")
+                print("You are right!" guess, "is in the word!")
                 guessed_letters.append(guess)
                 word_as_list = list(word_completiton)
                 indices = [i for i, letter in enumerate(word) if letter == guess]
