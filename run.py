@@ -45,7 +45,15 @@ def play(word):
             else:
                 guessed = True
                 word_completiton = word
-
+        else:
+            print("Not a valid guess.")
+        print(display_hangman(tries))
+        print(word_completiton)
+        print("/n")
+    if guessed:
+        print("You´re a mastermind, you got the whole thing right! Well done! Up for another one?")
+    else:
+        print("How many tries left? that´s right, NONE! Come back when you looked in the dictionary!")
         
 
 
