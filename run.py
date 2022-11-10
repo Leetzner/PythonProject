@@ -55,6 +55,20 @@ def play(word):
     else:
         print("How many tries left? that´s right, NONE! Come back when you looked in the dictionary!")
         
+def display_hangman(tries):
+    stages = [  
+                # initial empty state
+                """
+                   --------
+                   |      |
+                   |      
+                   |    
+                   |      
+                   |     
+                   -
+                """
+    ]
+    return stages[tries]
 
 
         
