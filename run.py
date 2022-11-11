@@ -12,19 +12,19 @@ def play(word):
     guessed = False
     guessed_letters = []
     guessed_words = []
-    tries = 6
+    tries = 7
     print("I challenge you to NOT get hanged by the pole""/n""Good luck!")
     print(display_hangman(tries))
     print(word_completion)
-    print("/n")
-#While loop for handling the ammount of tries and when you´re out of guesses
+    print("\n")
+#This is a while loop for handling the ammount of tries and when you´re out of guesses
     while not guessed and tries > 0 :
         guess = input("Please guess a letter or word:").upper()
         if len(guess) == 1 and guess.isalpha():
             if guess in guessed_letters:
                 print("Havent you clicked here before?", guess)
             elif guess not in word:
-                print(guess, "its a good guess, but not the right one")
+                print(guess, "it´s a good guess, but not the right one")
                 tries  -= 1
                 guessed_letters.append(guess)
             else:
@@ -36,7 +36,7 @@ def play(word):
                     word_as_list[index] = guess
                 word_completion = "".join(word_as_list)  
                 if"_" not in word_completion: 
-                    guess = True
+                    guessed = True
         elif len(guess) == len(word) and guess.isalpha():
             if guess in guessed_words:
                 print("You already clicked", guess)
@@ -51,14 +51,24 @@ def play(word):
             print("Not a valid guess.")
         print(display_hangman(tries))
         print(word_completion)
-        print("/n")
+        print("\n")
     if guessed:
-        print("Youre a mastermind, you got the whole thing right! Well done! Up for another one?")
+        print("You´re a mastermind, you got the whole thing right! Well done! Up for another one?")
     else:
         print("How many tries left? thats right, NONE! Come back when you have looked in the dictionary! This word was " + word + "")
         
 def display_hangman(tries):
-    stages = [  # final state: head, torso, both arms, and both legs
+    stages = [  # final state: head, torso, both arms, both legs and dead face
+                """
+                   --------
+                   |      |
+                   |    (x.x)
+                   |     \\|/
+                   |      |
+                   |     / \\
+                   -
+                """,
+                # head, torso, both arms and both legs
                 """
                    --------
                    |      |
@@ -68,7 +78,7 @@ def display_hangman(tries):
                    |     / \\
                    -
                 """,
-                # head, torso, both arms, and one leg
+                # head, body, both arms, and one leg
                 """
                    --------
                    |      |
@@ -78,7 +88,7 @@ def display_hangman(tries):
                    |     / 
                    -
                 """,
-                # head, torso, and both arms
+                # head, body, and both arms
                 """
                    --------
                    |      |
@@ -88,7 +98,7 @@ def display_hangman(tries):
                    |      
                    -
                 """,
-                # head, torso, and one arm
+                # head, body, and one arm
                 """
                    --------
                    |      |
@@ -98,7 +108,7 @@ def display_hangman(tries):
                    |     
                    -
                 """,
-                # head and torso
+                # head and body
                 """
                    --------
                    |      |
@@ -130,6 +140,8 @@ def display_hangman(tries):
                 """
     ]
     return stages[tries]
+
+# This funtion handles the restart/ retry
 
 def main():
     word = start_word()

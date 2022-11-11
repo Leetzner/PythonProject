@@ -14,4 +14,9 @@ word_list= [
     'beginner',
     'programming',
     'python',
+    'teddybear',
+    'warrior',
+    'game',
+    'positive',
+    'apartment',
 ]
