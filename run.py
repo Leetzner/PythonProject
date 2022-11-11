@@ -13,7 +13,7 @@ def play(word):
     guessed_letters = []
     guessed_words = []
     tries = 7
-    print("I challenge you to NOT get hanged by the pole""/n""Good luck!")
+    print("I challenge you to NOT get hanged by the pole""\n""Good luck!")
     print(display_hangman(tries))
     print(word_completion)
     print("\n")
@@ -24,7 +24,7 @@ def play(word):
             if guess in guessed_letters:
                 print("Havent you clicked here before?", guess)
             elif guess not in word:
-                print(guess, "it´s a good guess, but not the right one")
+                print(guess, "is a good guess, but not the right one")
                 tries  -= 1
                 guessed_letters.append(guess)
             else:
@@ -53,9 +53,9 @@ def play(word):
         print(word_completion)
         print("\n")
     if guessed:
-        print("You´re a mastermind, you got the whole thing right! Well done! Up for another one?")
+        print("You´re a mastermind, you got the whole thing right!""\n" "Well done! ""\n""Up for another one?")
     else:
-        print("How many tries left? thats right, NONE! Come back when you have looked in the dictionary! This word was " + word + "")
+        print("How many tries left? thats right, NONE!""\n""Come back when you have looked in the dictionary!""\n""This word was " + word + "")
         
 def display_hangman(tries):
     stages = [  # final state: head, torso, both arms, both legs and dead face

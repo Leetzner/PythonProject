@@ -19,4 +19,6 @@ word_list= [
     'game',
     'positive',
     'apartment',
+    'lamp',
+    'zebra',
 ]
