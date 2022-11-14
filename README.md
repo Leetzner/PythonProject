@@ -63,15 +63,15 @@ Hope you will have a good time guessing those words for the game, HINT (some ins
 
 - __Right word guessed__
 
-- When you beat the game it will compliment you as seen in the picture below, and ask you to play another round.
-- It will act abit cheeky with the encouragement of asking you to play another round with it (love it)
+  - When you beat the game it will compliment you as seen in the picture below, and ask you to play another round.
+  - It will act abit cheeky with the encouragement of asking you to play another round with it (love it)
 
 ![right-word-guessed](images/right-word-guessed.jpg)
 
 - __Wrong word guessed__
 
-- If the game beats you and you get "hanged by the pole", it will write a toxic comment to make you go look in a dictionary.
-- It will present the word that it picked for you and mock with "wanna go again?"
+  - If the game beats you and you get "hanged by the pole", it will write a toxic comment to make you go look in a dictionary.
+  - It will present the word that it picked for you and mock with "wanna go again?"
 
 ![wrong-word-guessed](images/wrong-word-guessed.jpg)
 
@@ -113,13 +113,13 @@ stage-7: head, body, arms, legs and a dead-face
 
 - When I first started making the game I didn't get it to work more then display the text "You´re a mastermind".
 
-      I googled for help and stumble across this guy namned Caleb who´s working for Kite, and watch a youtube video of him making the game and explaining the diffrent sections of the code.
+  - I googled for help and stumble across this guy namned Caleb who´s working for Kite, and watch a youtube video of him making the game and explaining the diffrent sections of the code.
       
-      After I saw this clip I managed to get my coding structure right and it helpt me with the way I could import the words to the game. But I struggle with getting the game to work, I studied my code and his code to compare how it differed from eachothter.
+  - After I saw this clip I managed to get my coding structure right and it helpt me with the way I could import the words to the game. But I struggle with getting the game to work, I studied my code and his code to compare how it differed from eachothter.
 
-      I found some misspelling on my code on different sections that did´nt make the code react to one another. My fuctions did´nt recieved the right information from the variables.
+  - I found some misspelling on my code on different sections that did´nt make the code react to one another. My fuctions did´nt recieved the right information from the variables.
 
-- When I played the game a couple of times a noticed some small buggs, I had made a wrong back slash on "/n" so it was displayed as "/n" in the game instead of creating a new line.
+  - When I played the game a couple of times a noticed some small buggs, I had made a wrong back slash on "/n" so it was displayed as "/n" in the game instead of creating a new line.
 
     I detected some wrongly placed gaps in my texts as seen in picture (notice the spaces before the text on the bottom of the gamescreen): 
     
@@ -128,28 +128,27 @@ stage-7: head, body, arms, legs and a dead-face
 
 ### Validator Testing 
 
-- HTML
-  - No errors were returned when passing through the official [W3C validator](https://validator.w3.org/nu/?doc=https%3A%2F%2Fleetzner.github.io%2FJava-Game%2F)
-- CSS
-  - No errors were found when passing through the official [(Jigsaw) validator](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fleetzner.github.io%2FJava-Game%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=sv)
+- PEP8
+
+  - The code has been worked through to create a proffsional view and structure to present a pleasant display
 
 ## Deployment
 
 This section should describe the process you went through to deploy the project to a hosting platform (e.g. GitHub) 
 
-- The site was deployed to GitHub pages. The steps to deploy are as follows: 
-  - In the GitHub repository, navigate to the Settings tab 
-  - From the source section drop-down menu, select the Master Branch
-  - Once the master branch has been selected, the page will be automatically refreshed with a detailed ribbon display to indicate the successful deployment. 
+- The site was deployed to the Heroku app: 
+- To do so I needed to make a third party authorisation to make the Heroku app take information from the GitHub repository
+- I struggled to get a good name for the app, sadly I ended up with the "121415" in the hangman name (all other names was taken)
 
-The live link can be found here - https://leetzner.github.io/Java-Game/
+The live link can be found here - https://hangman121415.herokuapp.com/
 
 
 ## Credits 
 
-I got a great deal of help with the javascript for the game from the "Clever Programmer" on youtube.
-I´ve used his code to build on and implemented my own thought of how I wanted the game to work.
+Espacially the www.w3schools.com for help with understanding the If/elif/else statements in working with functions.
 
-Found a picture that explains the game from Steam (https://steamcommunity.com/sharedfiles/filedetails/?id=798194678).
-Icons to the buttons are downloaded from (https://rwest88.github.io/Rock-Paper-Scissors/)
-Icon to facebook is downloaded from (https://icons8.com/icons/set/facebook) 
+I got a great deal of help with the Python coding for the game from the a guy named Caleb from Kite on youtube.
+I wrote a code and used his to get mine to work, had struggles to get the game running because of things i mention in the "testing" section.
+
+The Code Institute template that helpt with the validation of the code and structure.
+Also the videos provided by Code institute in their Python section.
