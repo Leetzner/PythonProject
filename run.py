@@ -1,11 +1,15 @@
 # Words for the game
+
 import random
 from words import word_list
 
-#This function handles the random choice of words from the wordslist
+# This function handles the random choice of words from the wordslist
+
+
 def start_word():
     word = random.choice(word_list)
     return word.upper()
+
 
 def play(word):
     word_completion = "_" * len(word)
@@ -13,29 +17,35 @@ def play(word):
     guessed_letters = []
     guessed_words = []
     tries = 7
-    print("I challenge you to NOT get hanged by the pole""\n""Good luck!")
+    print("I challenge you to NOT get hanged by the pole"
+          "\n"
+          "Good luck!")
     print(display_hangman(tries))
     print(word_completion)
     print("\n")
-#This is a while loop for handling the ammount of tries and when you´re out of guesses
-    while not guessed and tries > 0 :
+
+# This is a while loop for handling the ammount of
+# tries and when you´re out of guesses
+
+    while not guessed and tries > 0:
         guess = input("Please guess a letter or word:").upper()
         if len(guess) == 1 and guess.isalpha():
             if guess in guessed_letters:
                 print("Havent you clicked here before?", guess)
             elif guess not in word:
                 print(guess, "is a good guess, but not the right one")
-                tries  -= 1
+                tries -= 1
                 guessed_letters.append(guess)
             else:
                 print("You are right!", guess, "is in the word!")
                 guessed_letters.append(guess)
                 word_as_list = list(word_completion)
-                indices = [i for i, letter in enumerate(word) if letter == guess]
+                indices = [i for i, letter in enumerate(word)
+                           if letter == guess]
                 for index in indices:
                     word_as_list[index] = guess
-                word_completion = "".join(word_as_list)  
-                if"_" not in word_completion: 
+                word_completion = "".join(word_as_list)
+                if "_" not in word_completion:
                     guessed = True
         elif len(guess) == len(word) and guess.isalpha():
             if guess in guessed_words:
@@ -52,11 +62,22 @@ def play(word):
         print(display_hangman(tries))
         print(word_completion)
         print("\n")
+
     if guessed:
-        print("You´re a mastermind, you got the whole thing right!""\n" "Well done! ""\n""Up for another one?")
+
+        print("You´re a mastermind, you got the whole thing right!"
+              "\n"
+              "Well done! "
+              "\n"
+              "Up for another one?")
     else:
-        print("How many tries left? thats right, NONE!""\n""Come back when you have looked in the dictionary!""\n""This word was " + word + "")
-        
+        print("How many tries left? thats right, NONE!"
+              "\n"
+              "Come back when you´ve looked in the dictionary!"
+              "\n"
+              "This word was " + word + "")
+
+
 def display_hangman(tries):
     stages = [  # final state: head, torso, both arms, both legs and dead face
                 """
@@ -85,7 +106,7 @@ def display_hangman(tries):
                    |      O
                    |     \\|/
                    |      |
-                   |     / 
+                   |     /
                    -
                 """,
                 # head, body, and both arms
@@ -95,7 +116,7 @@ def display_hangman(tries):
                    |      O
                    |     \\|/
                    |      |
-                   |      
+                   |
                    -
                 """,
                 # head, body, and one arm
@@ -105,7 +126,7 @@ def display_hangman(tries):
                    |      O
                    |     \\|
                    |      |
-                   |     
+                   |
                    -
                 """,
                 # head and body
@@ -115,7 +136,7 @@ def display_hangman(tries):
                    |      O
                    |      |
                    |      |
-                   |     
+                   |
                    -
                 """,
                 # head
@@ -123,19 +144,19 @@ def display_hangman(tries):
                    --------
                    |      |
                    |      O
-                   |    
-                   |      
-                   |     
+                   |
+                   |
+                   |
                    -
                 """,
                 # initial empty state
                 """
                    --------
                    |      |
-                   |      
-                   |    
-                   |      
-                   |     
+                   |
+                   |
+                   |
+                   |
                    -
                 """
     ]
@@ -143,12 +164,14 @@ def display_hangman(tries):
 
 # This funtion handles the restart/ retry
 
+
 def main():
     word = start_word()
     play(word)
     while input("Wanna go again? (Y for yes/N for No)").upper() == "Y":
         word = start_word()
-        play (word)
+        play(word)
+
 
 if __name__ == "__main__":
     main()

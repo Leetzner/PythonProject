@@ -9,6 +9,8 @@ I´ve always wanted to know how to create games and work with bugs/ fixes.
 This one was a challenge for me, had some trouble with wrong spelling (I am a Swede).
 Learned the hard way how to implement text for the game and how to run it.
 
+When you play this game it will make you feel like a sibling or bestfriend, the game will mock you and compliment you on the way.
+
 Hope you will have a good time guessing those words for the game, HINT (some inspirations comes from Code insitute :) )
 
 
@@ -37,47 +39,92 @@ Hope you will have a good time guessing those words for the game, HINT (some ins
   - This is the "graphic" section of the game, here you get the lenght of the word (to the left) and the pole with the rope tied to it.
   - The blank wordsection will update with words if guesses are right as the game goes along.
 
-![Selection](images/Words%26hangman.jpg)
+![selection](images/Words%26hangman.jpg)
 
-- __Score-section__
+- __Guessing section__
 
-  - This section will appear when the game is played. 
-  - It will keep track of you score against the computer, you get +1 point for wins, 0 points for draw, and -1 if you loose. 
-  - I made it so you won´t see the computers score, what matters is you!
+  - This text-section encourage you to make a guess, either letter or a word.
+  - The guesses you make here will update the word if it´s a right guess.
 
-![Score-section](assets/readme-files/scoresection.jpg)
+![guessing-text](images/guessing-section.jpg)
 
-- __Restart button__ 
+- __Right guess__ 
 
-  - This button will restart the game. 
-  - If you wanna be the first one to 100 points, you may want to start over if you on the minus side.
-  - When you hover over this it changes color, when you press it changes again.
+  - This text will be provided to you if you make a "right-guess" 
 
-![restart-button](assets/readme-files/button1.jpg) ![button2](assets/readme-files/button2.jpg) ![button3](assets/readme-files/button3.jpg)
+![right-guess](images/right.jpg)
 
-- __Footer__
+- __Wrong guess__
 
-  - Wrote a small text that explains how to restart the game. 
-  - There´s a facebook icon with a small opacity change when hovered ( links to my facebook page). 
+  - This text will be provided to you if you make a wrong guess 
+  - As you can see here the game makes a little evil joke about you "Is a good guess, but not the right one".
 
-![footer-text](assets/readme-files/footer.jpg)![facebook-link](assets/readme-files/facebook1.jpg)
+![wrong-guess](images/wrong-text.jpg)
 
--__The Game__
+- __Right word guessed__
 
-- This is the game design I come up with.
-![the-game](assets/readme-files/website.jpg)
+- When you beat the game it will compliment you as seen in the picture below, and ask you to play another round.
+- It will act abit cheeky with the encouragement of asking you to play another round with it (love it)
+
+![right-word-guessed](images/right-word-guessed.jpg)
+
+- __Wrong word guessed__
+
+- If the game beats you and you get "hanged by the pole", it will write a toxic comment to make you go look in a dictionary.
+- It will present the word that it picked for you and mock with "wanna go again?"
+
+![wrong-word-guessed](images/wrong-word-guessed.jpg)
+
+- __Diffren´t stages of the game__
+
+stage 1: head 
+
+![stage-1](images/first-stage.jpg) 
+
+stage-2: head and body
+
+![stage-2](images/second-stage.jpg)
+
+stage-3: head, body and arm
+
+![stage-3](images/third-stage.jpg)
+
+stage-4: head, body and arms
+
+![stage-4](images/fourth-stage.jpg)
+
+stage-5: head, body, arms and a leg
+
+![stage-5](images/fifth-stage.jpg)
+
+stage-6: head, body, arms and legs
+
+![stage-6](images/sixth-stage.jpg)
+
+stage-7: head, body, arms, legs and a dead-face
+
+![stage-7](images/seventh-stage.jpg)
+
 ### Features Left to Implement
 
-- Graphics that make your choice vs computers choice to move the classic rock,paper,scissor motion then show results.
+- In the future I wanna make the game more graphic and not in a "DOS" displayed way.
 
 ## Testing 
 
-I´ve tried this a very large number of times even my friends have played it.
-The feedback I usually get is that it´s a nice time consuming game, in the future I should implement some more cool javascripts.
+- When I first started making the game I didn't get it to work more then display the text "You´re a mastermind".
 
-I´ve encountered some small bugs like the scissors wasn´t able to draw because I misspelled the word scissors in my Javascript, I missed the "s" on the end.
-When played on mobile-device the "restart-game" button stays white when pushed, but returns to the right color when you push the "sign-buttons".
-The "sign-buttons" hover over effect dosen´t work on the mobile device, because you won´t hover with your fingers :) (so not a bugg but not same as browser)
+      I googled for help and stumble across this guy namned Caleb who´s working for Kite, and watch a youtube video of him making the game and explaining the diffrent sections of the code.
+      
+      After I saw this clip I managed to get my coding structure right and it helpt me with the way I could import the words to the game. But I struggle with getting the game to work, I studied my code and his code to compare how it differed from eachothter.
+
+      I found some misspelling on my code on different sections that did´nt make the code react to one another. My fuctions did´nt recieved the right information from the variables.
+
+- When I played the game a couple of times a noticed some small buggs, I had made a wrong back slash on "/n" so it was displayed as "/n" in the game instead of creating a new line.
+
+    I detected some wrongly placed gaps in my texts as seen in picture (notice the spaces before the text on the bottom of the gamescreen): 
+    
+    ![game-test](images/test.png)
+
 
 ### Validator Testing 
 
@@ -85,10 +132,6 @@ The "sign-buttons" hover over effect dosen´t work on the mobile device, because
   - No errors were returned when passing through the official [W3C validator](https://validator.w3.org/nu/?doc=https%3A%2F%2Fleetzner.github.io%2FJava-Game%2F)
 - CSS
   - No errors were found when passing through the official [(Jigsaw) validator](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fleetzner.github.io%2FJava-Game%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=sv)
-
-### Unfixed Bugs
-
-The computer score dosen´t count, this is not a real bug, I just left it out because I think it ruins my design (the score still counts but dosen´t show up).
 
 ## Deployment
 
