@@ -11,6 +11,9 @@ def start_word():
     return word.upper()
 
 
+# This function handles the games structure, lives and startup text
+
+
 def play(word):
     word_completion = "_" * len(word)
     guessed = False
@@ -26,6 +29,7 @@ def play(word):
 
 # This is a while loop for handling the ammount of
 # tries and when you´re out of guesses
+# cred to Kaleb from kite for making this a less mess to me
 
     while not guessed and tries > 0:
         guess = input("Please guess a letter or word:").upper()
@@ -76,6 +80,10 @@ def play(word):
               "Come back when you´ve looked in the dictionary!"
               "\n"
               "This word was " + word + "")
+
+
+# This section is the diffrent graphics when you guess wrong
+# It´s seven diffrent stages that represent the 7 lives
 
 
 def display_hangman(tries):
@@ -161,6 +169,7 @@ def display_hangman(tries):
                 """
     ]
     return stages[tries]
+
 
 # This funtion handles the restart/ retry
 
